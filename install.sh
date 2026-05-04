@@ -2,18 +2,19 @@
 
 URL="https://github.com/ZayzX/JPM/releases/latest/download/JavaPackageManager.zip"
 ZIP="JavaPackageManager.zip"
-DIR="jpm"
 
 echo "Downloading JPM..."
 
 curl -L $URL -o $ZIP
 
-echo "Extracting..."
+echo "Extracting into current directory..."
 
-unzip -o $ZIP -d $DIR
+unzip -o $ZIP -d .
 
 echo "Cleaning up..."
 
 rm $ZIP
+
+rm -- "$0"
 
 echo "Installation complete!"
